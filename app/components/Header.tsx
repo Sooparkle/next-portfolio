@@ -20,10 +20,14 @@ const Header = () => {
   return (
     <header>
       <div>
+        <Link
+        href='/'
+        >
         <h1
           className='hidden'
         >Soohan Portflio</h1>
         <p>Soohan</p>
+        </Link>
       </div>
 
       <section
