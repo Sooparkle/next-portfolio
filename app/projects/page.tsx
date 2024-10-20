@@ -1,11 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import styles from './projects.module.css';
+
 
 const Projectspage = () => {
   return (
     <>
-      <section>
+      <section
+        className={styles.projectWrap}
+      >
+        {/* left area */}
         <div>
           <h3>
           <Link 
@@ -19,12 +24,21 @@ const Projectspage = () => {
             
             </p>
         </div>
-        <div>
+
+
+        {/* right area */}
+        <div
+        style={{
+          position : 'relative',
+          width: '500px',
+          aspectRatio: '1/1'
+        }}
+        >
           <Image
-            src={'https://photos.google.com/share/AF1QipNZusMAEOjAEHplS9Q-YHrhry3e2lxLhmjfRgHFzv54pCkbpF9uGyuLdOyTsNNbqQ/photo/AF1QipMBfrP2Z8OnkKeRVeNMfA2EdeTfLVURSKa_rCu9?key=MTd4SVBTYjFqZ0xFcmdZOHNPYWhVSldJVWxaNm5n'}
+            src='https://lh3.googleusercontent.com/pw/AP1GczMnkz73OX9FhyEzSjqGCph5Ychtf3CzeQAlVkqo5kU17wMBS4HngmoiHMZVxhf97rooU_N9H9UZE0UVfyhb1nzqH_Xq3-jk_EMD8QKkCkip9zkwOR6GdLcJCU_hnbr9Z-Tl6cC_kJuaANGeqaApSw0R=w2048-h1536-s-no-gm?authuser=0'
             alt='푸딩캠프, 컨퍼런스 단체 사진'
-            width="300"
-            height="300"
+            fill
+            objectFit='contain'
           >
 
           </Image>
