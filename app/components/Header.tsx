@@ -46,8 +46,10 @@ const Header = () => {
       >
         <ul>
         {
-          menus.map(menu => (
-            <li>
+          menus.map((menu, index) => (
+            <li
+              key={index}
+            >
               <Link
                 href={menu.url}
               >

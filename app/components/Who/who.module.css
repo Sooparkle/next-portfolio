@@ -1,3 +1,9 @@
+.whoami{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .whoSlider{
   width: 500px;
   height: 500px;
@@ -37,6 +43,104 @@
 
 }
 
+.sliderIndexBtnWrap{
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.sliderIndexBtn{
+  all: unset;
+  cursor: pointer;
+}
+
+.sliderIndexBtn:hover{
+  animation: squish 250ms ease-in-out;
+}
+
+.sliderIndexBtn > svg{
+  color :#ededed;
+  width: 12px;
+  height: 12px;
+}
+
+
+
+
+
+/* Personal Blog area  */
+
+.personalWrap{
+  border-radius: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.05);
+  height: 300px;
+  border: 1px solid #ededed;
+  padding: 1rem;
+  place-self: center;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+}
+
+.personalPosition{
+  position: absolute;
+  top: 8%;
+  right: 4%;
+}
+
+.personalInfoWrap{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+
+.personalInfoWrap > ul > li > div:nth-of-type(1){
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #ededed;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.personalInfoWrap > ul > li:not(:nth-last-of-type(1)){
+  margin-bottom: 10px;
+}
+
+
+.personalInfoWrap > ul > li > div:nth-of-type(1) svg{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.personalBlogWrap ul{
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.personalContent{
+  transition: height 2s ease-in-out;
+}
+
+
+.personalBlog svg{
+  width: 26px;
+  height: 26px;
+}
+
+
 @keyframes border{
 
+}
+
+@keyframes squish {
+  50%{
+    scale : 1.4 0.6;
+  }
 }

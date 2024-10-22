@@ -72,10 +72,13 @@ const ImageSlider = () => {
       </button>
 
 
-      {/* <div>
+      <div
+        className={styles.sliderIndexBtnWrap}
+      >
         {
           images.map((a, index)=>(
             <button
+              className={styles.sliderIndexBtn}
               key={index}
               onClick={()=>setImageIndex(index)}
             >
@@ -89,7 +92,7 @@ const ImageSlider = () => {
             </button>
           ))
         }
-      </div> */}
+      </div>
     </div>
   )
 }
