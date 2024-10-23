@@ -1,12 +1,13 @@
 .whoami{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
   gap: 1rem;
 }
 
 .whoSlider{
   width: 500px;
-  height: 500px;
+  height: 400px;
   position: relative;
 }
 
@@ -15,6 +16,7 @@
   height: 100%;
   display: flex;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
 .sliderImg{

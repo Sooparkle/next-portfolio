@@ -4,10 +4,10 @@ import WhoAmI from "./components/Who/WhoAmI";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
 
-    <h1>TEST</h1>
-    <WhoAmI />
-    </div>
+      <h1>TEST</h1>
+      <WhoAmI />
+    </main>
   );
 }

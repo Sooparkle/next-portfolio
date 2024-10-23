@@ -40,7 +40,7 @@ const ImageSlider = () => {
               src={image}
               alt='본인 사진' 
               width={500}
-              height={500}
+              height={400}
               style={{
                 translate : `${-100 * imageIndex}%`
               }}
