@@ -1,5 +1,8 @@
 import Front from './Front';
 import styles from './MainExperience.module.css';
+import OtherExperience from './OtherExperience';
+
+
 
 const MainExperience =() =>{
 
@@ -7,7 +10,14 @@ const MainExperience =() =>{
     <article
       className={styles.MainExperience}
     >
-      <Front />
+      <h2>EXPERIENCE</h2>
+
+      <div
+        className={styles.ExperienceContentsWrap}
+      >
+        <Front />
+        <OtherExperience />
+      </div>
     </article>
 
   )

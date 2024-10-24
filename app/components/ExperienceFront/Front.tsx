@@ -2,7 +2,7 @@ import styles from './MainExperience.module.css'
 
 const ExperienceDatas = [
   {
-    data : "2024.08.26 ~ 2029.28",
+    data : "2024.08.26 ~ 2024.09.28",
     period : '1mo +',
     title : "푸딩캠프, 컨퍼런스-언컨퍼런스2024",
     contents : [
