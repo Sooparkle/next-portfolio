@@ -2,7 +2,8 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import WhoAmI from "./components/Who/WhoAmI";
 import Front from "./components/ExperienceFront/Front";
-import Mainexperience from "./components/ExperienceFront/Mainexperience";
+import MainExperience from "./components/ExperienceFront/MainExperience";
+
 
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
 
       <h1>TEST</h1>
       <WhoAmI />
-      <Mainexperience />
+      <MainExperience />
     </main>
   );
 }

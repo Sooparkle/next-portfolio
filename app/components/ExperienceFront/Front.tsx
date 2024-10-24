@@ -1,4 +1,5 @@
-import styles from '@/app/experience/Experience.module.css'
+import styles from './MainExperience.module.css'
+
 const ExperienceDatas = [
   {
     data : "2024.08.26 ~ 2029.28",
