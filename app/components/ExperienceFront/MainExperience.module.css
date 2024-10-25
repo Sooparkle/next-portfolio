@@ -44,11 +44,11 @@
   content: " ";
   display: block;
   width: 2px;
-  height: 300px;
+  height: 508px;
   background: var(--basic-gray);
   position: absolute;
-  left: 15px;
-  top : 1rem;
+  left: 16px;
+  top : 22px;
 }
 
 .experienceItem{
@@ -65,6 +65,7 @@
   border-radius: 50%;
   position: absolute;
   left: -35px;
+  top: 5px;
 }
 
 .experienceHeader{
@@ -79,7 +80,9 @@
 }
 
 .experienceHeader > p .period{
+  font-size: 14px;
   color: var(--basic-strong-gray);
+  padding-bottom: 2px;
 }
 
 .experienceHeader > p .data{
@@ -112,4 +115,52 @@
 .experienceBottom .item:not(:nth-last-of-type(1)) {
   margin-bottom: 6px;
 
+}
+
+
+
+
+
+
+
+/* other experience CSS 영역 */
+.OtherExperience{
+  max-width: 450px;
+  width: 100%;
+}
+
+.OtherExperience h4{
+  margin-bottom: 20px;
+  color: var(--basic-strong-gray);
+}
+
+.OtherExperienceItemWrap ul {
+  display: grid;
+  gap: 1rem;
+}
+
+.OtherExperienceItemWrap ul li {
+  display: flex;
+  
+  gap: 1rem;
+}
+
+
+.OtherExperienceItemWrap li div {
+  padding: 15px 0;
+  width: 100%;
+  border: 1px solid var(--basic-gray);
+  border-radius: 0.8rem;
+  text-align: center;
+
+}
+
+.OtherExperienceItemHeader{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.OtherExperienceItemBottom{
+  font-size: 12px;
+  color: var(--basic-strong-gray);
 }
