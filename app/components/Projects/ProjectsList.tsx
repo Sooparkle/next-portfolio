@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import styles from './MainProjects.module.css'
 import Link from 'next/link'
-
+import pudding from '@/app/asset/puddingcamp.png'
+import jom from '@/app/asset/jomswimswim.png'
+import library from '@/app/asset/library.png'
+import ProjectBtn from './ProjectBtn'
 
 const projects = [
   {
@@ -11,8 +14,10 @@ const projects = [
     name: "컨퍼런스-언컨퍼런스 by 푸딩캠프",
     description:
       "푸딩캠프에서 주최하는 컨퍼런스 홈페이지 프론트 엔드로써 참여",
-    contribution: "프론트 : 약 92%",
-    // imageUrl: [`${puddingcamp}`],
+    contribution: "(프론트 : 약 92%)",
+    imageUrl: [
+      pudding
+    ],
     url: `https://conference.puddingcamp.com/`,
     github: "https://puddingcamp.com/meetups/conference2024/staffs#staff-soo-parkle",
     contents:[
@@ -43,7 +48,9 @@ const projects = [
     description:
       "DB 설계 및 DB User Table 활용, 로그인 인증 가능 숙박 사이트",
     contribution: "100%",
-    // imageUrl: [`${accommodationImage}`],
+    imageUrl: [
+      jom,
+    ],
     url: `https://next-type-accommodation.pages.dev/`,
     github: "https://github.com/Sooparkle/project3/tree/home",
     gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
@@ -78,7 +85,9 @@ const projects = [
       "공공 API를 활용하여, 서울특별시 지역구별 도서 베스트 대출 목록 통신",
     contribution: "100%",
 
-    // imageUrl: [`${SoeulLocal}`],
+    imageUrl: [
+      library,
+    ],
     url: "https://library-62r.pages.dev",
     github: "https://github.com/Sooparkle/next-accom",
     gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
@@ -112,33 +121,49 @@ const projects = [
 const ProjectsList = () =>{
 
   return(
-    <section>
+    <section
+      className={styles.eachProjectWrap}
+    >
       <ul>
         {
           projects.map((item, index) =>(
           <li
             key={index}
+            className={styles.projectItem}
           >
             {/* 이미지 영역 */}
-            <div>
-              {/* <Image
-                src={}
-                fill
-
+            <div
+              className={styles.imageWrap}
+            >
+              {
+                item.imageUrl.map((img, index) =>(
+                  <Image
+                    key={index}
+                    src={img}
+                    alt='project image'
+                    fill
+                    sizes='max-width : 500px height : 350px'
+                    priority={false}
+                  >
+                    </Image>
+                  
+                ))
+              }
+              <p
+                className={styles.contribution}
               >
-
-              </Image> */}
-              <p>
                 <span>{item.type}</span>
                 <span>{item.contribution}</span>
               </p>
             </div>
   
-  
-            {/* 내용 영역 */}
-            <div>
 
-              <h3>{item.title}</h3>
+            {/* 내용 영역 */}
+            <div
+              className={styles.projectContentWrap}
+            >
+
+              <h3>{item.title}. {item.name}</h3>
               {/* 프로젝트 메세지 영역 */}
               <ul>
                 {
@@ -150,15 +175,26 @@ const ProjectsList = () =>{
 
 
               {/* 키워드 영역 */}
-              <p>
+              <p
+                className={styles.projectKeywordWrap}
+              >
                 {
                   item.keywords.map((keyword, index) =>(
-                    <span  key={index}>{keyword}</span>
+                    <span 
+                      key={index}
+                      className={styles.projectKeyword}
+                    >
+                      {keyword}
+                    </span>
                   ))
                 }
               </p>
+              {
+                <ProjectBtn liveDemo={item.url} popupURL={item.popup} />
+              }
             </div>
           </li>
+
           ))
 
         }
