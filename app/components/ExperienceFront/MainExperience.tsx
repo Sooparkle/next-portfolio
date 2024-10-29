@@ -10,7 +10,7 @@ const MainExperience =() =>{
     <article
       className={styles.MainExperience}
     >
-      <h2>EXPERIENCE</h2>
+      <h2>EXPERIENCES</h2>
 
       <div
         className={styles.ExperienceContentsWrap}
