@@ -8,7 +8,7 @@ const MainProjects = () => {
     <article
       className={styles.MainProjects}
     >
-      <h2>Proejects</h2>
+      <h2>PROJECTS</h2>
 
       <ProjectsList />
     </article>
