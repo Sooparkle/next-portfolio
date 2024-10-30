@@ -1,10 +1,15 @@
 .footerWrap{
-  display: gird;
-  grid-template-columns: 1fr 1fr;
+  display: grid;
   background: var(--basic-gray);
   padding: 40px 0;
+}
 
-
+.footerWrap > p{
+  place-self: center;
+  margin: 50px;
+  color: var(--basic-strong-gray);
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .footerBackground{
@@ -12,7 +17,8 @@
   width:100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* place-items: center; */
 
 }
 
@@ -29,8 +35,11 @@
 
 
 
+.footerPersonal span{
+  vertical-align: middle;
+}
+
 .footerPersonal svg{
   width: 20px;
   height: 20px;
-
 }
