@@ -1,0 +1,110 @@
+.MainSkills{
+  padding : 80px 0 80px 0;
+
+}
+
+.MainSkills  h2{
+ margin-bottom: 30px;
+
+}
+
+
+.skillsWrap{
+  display: grid;
+  gap: 30px;
+
+
+}
+
+/* .skillsTitle{
+  position: absolute;
+} */
+
+.skillsWrap div{
+  display: inline-flex;
+}
+
+
+.skillsWrap > div > div{
+  display: inline-flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+
+  width: max-content;
+  flex-wrap: nowrap;
+  animation-timeline: scroll(root);
+}
+
+.scrolling1 {
+  animation: scrolling1 linear;
+}
+.scrolling2 {
+  animation: scrolling2 linear;
+}
+.scrolling3 {
+  animation: scrolling3 linear;
+}
+
+@keyframes scrolling1 {
+  to {
+    transform: translate(calc(-80% - 1rem))
+  }
+}
+@keyframes scrolling2{
+  to {
+    transform: translate(calc(-10% - 100rem))
+  }
+}
+@keyframes scrolling3 {
+  to {
+    transform: translate(calc(-80% - 10rem))
+  }
+}
+
+.skillsWrap > div > div:not(:nth-of-type(1)){
+  margin-left: 20px;
+}
+
+
+.skillsWrap .betterLine,
+.skillsWrap .goodLine,
+.skillsWrap .librariesLine{
+  background: var(--basic-gray);
+  padding: 4px 8px;
+  border-radius: 4px;
+
+}
+.skillsWrap .betterLine{
+  font-size: 64px;
+  letter-spacing: 6px;
+}
+
+.skillsWrap .goodLine {
+  font-size: 50px;
+}
+
+.skillsWrap .librariesLine{
+  font-size: 42px;
+}
+
+
+
+@media screen and (max-width : 768px) {
+  .skillsWrap dl dd{
+    gap: 10px;
+ 
+  }
+
+  .skillsWrap .betterLine{
+    font-size: 18px;
+  }
+  
+  .skillsWrap .goodLine {
+    font-size: 16px;
+  }
+  
+  .skillsWrap .librariesLine{
+    font-size: 16px;
+  }
+  
+}
