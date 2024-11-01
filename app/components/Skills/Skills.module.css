@@ -4,7 +4,7 @@
 }
 
 .MainSkills  h2{
- margin-bottom: 30px;
+  margin-bottom: 30px;
 
 }
 
@@ -32,7 +32,7 @@
 
   width: max-content;
   flex-wrap: nowrap;
-  animation-timeline: scroll(root);
+  /* animation-timeline: scroll(root); */
 }
 
 .scrolling1 {
