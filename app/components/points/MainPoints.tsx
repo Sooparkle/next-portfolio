@@ -35,7 +35,7 @@ const MainPoints = () =>{
             <span
               className={styles.title}
             >
-              개발 역량을 겸비한
+              개발 역량 겸비한
             </span>
           </p>
           <div>
